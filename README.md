@@ -20,14 +20,14 @@
   ```
 - Gửi lệnh qua ROS service:
   ```bash
-  rosservice call /gripper_command "command: 'activate'"  # dùng để active tool
-  rosservice call /gripper_command "command: 'open'"      # dùng để mở hết mức tool
-  rosservice call /gripper_command "command: 'close'"     # dùng để đóng hết mức tool
-  rosservice call /gripper_command "command: 'reset'"     # dùng để reset lỗi
-  rosservice call /gripper_command "command: 'stop'"      # dùng để dừ tool
+  rosservice call /gripper_control "command: 'activate'"  # dùng để active tool
+  rosservice call /gripper_control "command: 'open'"      # dùng để mở hết mức tool
+  rosservice call /gripper_control "command: 'close'"     # dùng để đóng hết mức tool
+  rosservice call /gripper_control "command: 'reset'"     # dùng để reset lỗi
+  rosservice call /gripper_control "command: 'stop'"      # dùng để dừ tool
   
   # Lệnh custom: vị trí, tốc độ, lực
-  rosservice call /gripper_command "command: 'custom:128,150,100'"
+  rosservice call /gripper_control "command: 'custom:128,150,100'"
   ```
 4. Điều khiển qua ROS driver node
 - Chạy ROS driver node điều khiển gripper:
@@ -36,9 +36,9 @@
   ```
 - Gửi lệnh qua ROS topic:
   ```bash
-  rostopic pub /gripper_command_topic std_msgs/String "data: 'open'"
-  rostopic pub /gripper_command_topic std_msgs/String "data: 'close'"
-  rostopic pub /gripper_command_topic std_msgs/String "data: 'activate'"
+  rostopic pub /gripper_command_string std_msgs/String "data: 'open'"
+  rostopic pub /gripper_command_string std_msgs/String "data: 'close'"
+  rostopic pub /gripper_command_string std_msgs/String "data: 'activate'"
   
   # Lệnh custom: vị trí, tốc độ, lực
   rostopic pub /gripper_command_string std_msgs/String "data: 'custom:120,150,100'"
