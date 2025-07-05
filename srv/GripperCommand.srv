@@ -1,4 +1,0 @@
-GripperCommand command  # activate | open | close | reset | stop | custom:pos,speed,force
----
-bool success
-string message

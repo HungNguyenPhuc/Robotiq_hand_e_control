@@ -1,11 +1,7 @@
 <launch>
-  <node name="gripper_driver_node"
+  <node name="gripper_topic_node"
         pkg="robotiq_hand_e_control"
-        type="gripper_driver_node.py"
+        type="gripper_topic_node.py"
         output="screen">
-    <param name="port" value="/dev/ttyUSB0" />       <!-- Hoặc /dev/ttyS1 nếu dùng RS232 -->
-    <param name="baudrate" value="115200" />
-    <param name="unit_id" value="9" />               <!-- ID thường là 9 với Hand-E -->
-
   </node>
 </launch>

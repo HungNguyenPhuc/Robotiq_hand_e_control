@@ -12,7 +12,7 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   message_generation
 )
-
+catkin_python_setup()
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
 
@@ -156,8 +156,10 @@ include_directories(
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
 catkin_install_python(PROGRAMS
-  scripts/gripper_service.py 
-  scripts/gripper_driver_node.py
+  scripts/gripper_service_server.py
+  scripts/gripper_topic_node.py
+  scripts/robotiq_status_publisher.py
+  scripts/robotiq_driver_node.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
@@ -201,3 +203,5 @@ catkin_install_python(PROGRAMS
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+# Add this line to make 'lib' a Python module
+#set(PYTHONPATH ${CMAKE_CURRENT_SOURCE_DIR}/lib)

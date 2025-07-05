@@ -1,0 +1,7 @@
+string command              # activate, reset, open, close, goto, gotomm, calibrate, getpos, getposmm, isactivated, iscalibrated
+float32 arg1                # Có thể là vị trí, tốc độ, closemm, v.v.
+float32 arg2                # Có thể là tốc độ, lực, openmm, v.v.
+float32 arg3                # Có thể là lực hoặc không dùng
+---
+bool success
+string message
