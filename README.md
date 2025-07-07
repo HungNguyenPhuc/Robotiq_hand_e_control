@@ -12,7 +12,7 @@
   
     ```bash
     cd ~/your_ros_ws/src
-    git clone https://github.com/HungNguyenPhuc/Robotiq_hand_e_control.git  
+    git@github.com:HungNguyenPhuc/robotiq_hand_e_control.git
 - Xây dựng gói
   
     ```bash
